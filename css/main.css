@@ -5,9 +5,9 @@
 	src: url('../fonts/wisdom-script.otf') format('opentype');
 }
 
-html (
+html {
 	font-size: 16px;
-)
+}
 
 body {
 	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
@@ -19,10 +19,11 @@ body {
 
 .container{
 	max-width: 1200px;
-	margin: 0 auto;
+	width: 90%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-flow: row wrap;
 }
 
 h1,
@@ -33,14 +34,10 @@ h4 {
 	text-transform: uppercase;
 	font-weight: 700;
 }
-h1 {
-	font-size: 1.875em;
-}
+
+
 h2 {
     font-size: 1.5em;
-}
-h3 {
-	font-size: 1.125em;
 }
 h4 {
 	font-size: 0.75em;
@@ -54,25 +51,29 @@ p {
 
 /*The widths are in a percentage!*/
 header {
-	height: 110px;
+	width: 100%;
 	border-bottom: 3px solid #77a466;
-	margin: 0 auto;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-flow: row wrap; 
+	text-align: center;
 }
 
 header h1 {
+	font-size: 1.875em;
 	margin: 0;
-	padding: 38px 0;
+	padding: 38px 20px 20px 20px;
+	border-bottom: 3px solid #77a466; 
+    width: 100%;
 }
 header h1 span {
 	color: #77a466;
 }
 
 header nav {
-	float: left;
 	padding: 46px 0;
+	width: 100%;
 }
 header nav ul {
 	margin: 0;
@@ -82,7 +83,7 @@ header nav ul li {
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: 0.875em;
-	padding: 0 10px;
+	padding: 10px 0;
 	list-style: none;
 }
 header nav ul li a{
@@ -93,30 +94,22 @@ header nav ul li a{
 /*The widths are in a percentage!*/
 .top-section,
 .bottom-section {
-	margin: 0 auto;
-	clear: both;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-flow: row wrap;
 }
 
-.main-image {
-	height: auto;
-	float: left;
-}
 .main-image img {
 	width: 100%;
 	border-bottom: 3px solid #77a466;
 }
 
-.main-title {
-	height: auto;
-	float: left;
-}
 .main-title h3 {
 	text-align: left;
 	padding: 5px 0;
 	color: #77a466;
+	font-size: 1.125em;
 }
 .main-title p {
 	padding: 0;
@@ -128,22 +121,7 @@ header nav ul li a{
 .section-two,
 .section-three {
 	width: 100%;
-	height: auto;
 	border-top: 1px solid #eee;
-}
-
-.section-one h4 {
-	padding: 10px 0;
-}
-
-.section-two {
-	border-left: 1px solid #eee;
-	border-right: 1px solid #eee;
-}
-
-.section-two h4,
-.section-three h4 {
-	padding: 10px 30px;
 }
 
 .menu {
@@ -168,11 +146,14 @@ header nav ul li a{
 
 /*The widths are in a percentage!*/
 footer {
-	height: 50px;
 	border-top: 3px solid #eee;
-	margin: 0 auto;
-	clear: both;
 	text-align: center;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+	
 }
 footer span {
 	font-family: 'Wisdom Script', cursive;
@@ -183,3 +164,20 @@ footer span {
 
 /* --------------- RESPONSIVE ---------------- */
 
+@media all and (min-width:768px) {
+    /* Tablet styles here */
+ 
+}
+ 
+@media all and (min-width:1200px) {
+    /* Desktop styles here */
+
+	.section-two {
+		border-left: 1px solid #eee;
+		border-right: 1px solid #eee;
+	}
+	.section-two h4,
+	.section-three h4 {
+		padding: 10px 30px;
+	}
+}
