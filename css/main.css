@@ -72,7 +72,7 @@ header h1 span {
 }
 
 header nav {
-	padding: 46px 0;
+	padding: 20px 0;
 	width: 100%;
 }
 header nav ul {
@@ -167,17 +167,47 @@ footer span {
 @media all and (min-width:768px) {
     /* Tablet styles here */
  
-}
- 
-@media all and (min-width:1200px) {
-    /* Desktop styles here */
-
-	.section-two {
-		border-left: 1px solid #eee;
-		border-right: 1px solid #eee;
+	.bottom-section {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		flex-flow: row wrap;
+		border-top: 1px solid #eee;
+	}
+	
+	.section-one,
+	.section-two,
+	.section-three {
+		width: 30%;
+		border-top: none;
 	}
 	.section-two h4,
 	.section-three h4 {
 		padding: 10px 30px;
 	}
+	.section-two {
+		border-left: 1px solid #eee;
+		border-right: 1px solid #eee;
+	}
+}
+ 
+@media all and (min-width:1200px) {
+    /* Desktop styles here */
+	header {
+		justify-content: space-between;
+	}
+	header h1 {
+		width: 30%;
+		border: none;
+		padding: 0;
+		text-align: left;
+	}
+	header nav {
+		width: 40%;
+	}
+	header nav ul {
+		display: flex;
+		justify-content: space-between;
+	  }
+	
 }
